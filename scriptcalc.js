@@ -1,6 +1,7 @@
 function ValidatefirstInput(firstInput) {
     if (isNaN(firstInput)) {
         alert("Refresh and enter a valid number");
+        return ValidatefirstInput(firstInput)
     } else {
         return firstInput;
     }
@@ -12,6 +13,7 @@ var operator = prompt("Specify the operation: /,  +, -, * ");
 function ValidateSecondInput(secInput) {
     if (isNaN(secInput)) {
         alert("Refresh and enter a valid second number");
+        return ValidateSecondInput(secInput)
     } else {
         return secInput;
     }
